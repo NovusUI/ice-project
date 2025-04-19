@@ -7,7 +7,7 @@ import LandScapeShowcase from '../../components/LandScapeShowcase';
 
 const index = () => {
 
-    const { id } = useParams<{ id: string }>();
+    const { id } = useParams<{ id?: keyof typeof data }>();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -122,7 +122,10 @@ const index = () => {
         }
     }
 
-
+    if (!id || !(id in data)) {
+        // return <Navigate to="/404" />; // optional redirect
+        return <div className="text-center mt-20 text-lg">Project not found.</div>;
+      }
 
     
   return (
