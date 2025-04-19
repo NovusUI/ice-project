@@ -3,7 +3,6 @@ import {
     Instagram,
     Facebook,
     Close as XIcon,
-    ArrowForward,
   } from '@mui/icons-material';
 import AnimatedBtn from '../../components/buttons/AnimatedBtn';
   
