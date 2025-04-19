@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedBtn from '../../components/buttons/AnimatedBtn';
+import { useNavigate } from 'react-router-dom';
 
 const backgroundImages = [
   '/heroimg.jpg', // Replace with your actual image URLs
@@ -11,6 +12,7 @@ const backgroundImages = [
 
 const HeroSection: React.FC = () => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -57,7 +59,7 @@ const HeroSection: React.FC = () => {
         <p className="mt-4 max-w-xl text-lg md:text-xl text-gray-200">
           Crafting bespoke architectural solutions that blend innovation, elegance, and functionality
         </p>
-        <AnimatedBtn text='Learn more' />
+        <AnimatedBtn text='Learn more' onClick={()=>navigate("/expertise")} />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import LandScapeShowcase from "../../components/LandScapeShowcase"
 import { ProjectShowcase } from "../../components/ProjectShowcase"
 import LongTermPlan from "./LongTermPlan"
@@ -5,6 +6,12 @@ import USPs from "./USPs"
 
 
 const index = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+  }, []);
+
   return (
     <>
       <ProjectShowcase backgroundImages={['/arch1.jpg','/projects2.jpg','arch.jpg']} header="about us"/>

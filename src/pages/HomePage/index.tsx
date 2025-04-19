@@ -5,8 +5,13 @@ import OurProjects from './OurProjects'
 import IntimateClientApproach from './IntimateClientApproach'
 import AboutUs from './AboutUs'
 import ContactForm from './ContactForm'
+import { useEffect } from 'react'
 
 const index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+  }, []);
   return (
     <>
         <HeroSection/>

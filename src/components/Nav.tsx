@@ -4,11 +4,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 
+import { useLocation } from 'react-router-dom';
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+const currentPath = location.pathname;
+
+  
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-[40px] lg:px-[80px] py-6 shadow-sm sticky top-0 z-20 bg-white">
+    <nav className="flex items-center justify-between px-6 md:px-[40px] lg:px-[80px] h-[10vh] shadow-sm sticky top-0 z-30 bg-white">
       {/* Logo Section with dramatic reveal */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -20,16 +27,26 @@ const Navbar = () => {
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex space-x-6 text-sm font-medium">
-        {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) => (
+        {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) =>{ 
+           const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
+           const isActive = currentPath === linkPath;
+        return(
           <Link
           key={item}
           to={`/${item.replace(" ", "-").toLowerCase()}`}
-          className="relative group text-black hover:text-[#1867C6] transition"
+          className={`relative group transition ${
+            isActive ? "text-[#1867C6]" : "text-black hover:text-[#1867C6]"
+          }`}
         >
           {item}
-          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#1867C6] transition-all duration-300 group-hover:w-[80%]"></span>
+          <span
+        className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
+          isActive ? "w-[80%]" : "w-0 group-hover:w-[80%]"
+        }`}
+      ></span>
         </Link>
-        ))}
+        )
+      })}
       </div>
 
       {/* Desktop CTA Button */}
@@ -60,7 +77,7 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 0.8, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="fixed inset-0 z-50 bg-black text-white flex flex-col items-center justify-center space-y-8 text-lg"
@@ -77,18 +94,25 @@ const Navbar = () => {
             </motion.button>
 
             {/* Nav Links with animated underline */}
-            {["Home", "Expertise", "Projects", "About us", "Contact us"].map((item) => (
+            {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) => {
+                const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
+                const isActive = currentPath === linkPath;
+              return(
               <Link
               key={item}
               to={`/${item.replace(" ", "-").toLowerCase()}`}
-              className="relative hover:text-[#1867C6] transition"
+              className={`relative text-white}`}
               onClick={() => setIsOpen(false)}
             >
               {item}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#1867C6] transition-all duration-300 hover:w-full"></span>
+              <span
+        className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
+          isActive ? "w-[80%]" : "w-0 group-hover:w-[80%]"
+        }`}
+      ></span>
             </Link>
             
-            ))}
+            )})}
 
             {/* Contact & Socials */}
             <div className="mt-10 space-y-2 text-sm text-gray-400 text-center">

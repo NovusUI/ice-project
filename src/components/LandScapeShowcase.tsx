@@ -9,9 +9,10 @@ interface Props {
   body2?:string;
   color?:string;
   textColor?: string;
+  onClick?:()=>void
 }
 
-const LandScapeShowcase = ({header,buttonTitle,body,color="bg-[#ffffff]",textColor="text-[#000000]",body2}:Props) => {
+const LandScapeShowcase = ({onClick,header,buttonTitle,body,color="bg-[#ffffff]",textColor="text-[#000000]",body2}:Props) => {
   return (
     <div className={`${color} w-full  py-[160px] px-[20px] md:px-[100px] lg:px-[300px] ${textColor} flex flex-col items-center`}>
     <motion.h2
@@ -28,7 +29,7 @@ viewport={{ once: false, amount: 0.5 }}
      {body2 && <p className="text-sm md:text-base mb-6">
         {body2}
       </p>}
-      {buttonTitle &&<AnimatedBtn text={buttonTitle} color={color} textColor={textColor}/>}
+      {buttonTitle &&<AnimatedBtn text={buttonTitle} color={color} textColor={textColor} onClick={onClick}/>}
     </div>
   )
 }

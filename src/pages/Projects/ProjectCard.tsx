@@ -1,13 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
   image: string;
   title: string;
+  path: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ image, title }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ image, title,path }) => {
+
+  const navigate = useNavigate()
   return (
-    <div className="relative group rounded-[20px] md:rounded-[30px] overflow-hidden cursor-pointer md:h-[450px]">
+    <div className="relative group rounded-[20px] md:rounded-[30px] overflow-hidden cursor-pointer md:h-[450px]" onClick={()=>navigate("/project/"+path)}>
       <img
         src={image}
         alt={title}

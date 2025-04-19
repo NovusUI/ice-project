@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import LandScapeShowcase from "../../components/LandScapeShowcase"
 import { ProjectShowcase } from "../../components/ProjectShowcase"
 
@@ -6,6 +7,10 @@ import Section2 from "./Section2"
 
 
 const index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+  }, []);
   return (
     <>
         <ProjectShowcase backgroundImages={["/arch.jpg","/arch1.jpg","/arch2.jpg"]} header="architecture"/>
