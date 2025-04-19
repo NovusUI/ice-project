@@ -1,7 +1,6 @@
 // components/ProjectShowcase.tsx
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowForward } from '@mui/icons-material';
 import AnimatedBtn from './buttons/AnimatedBtn';
 
 interface ProjectShowcaseProps {

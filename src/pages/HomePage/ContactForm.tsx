@@ -31,7 +31,6 @@ const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),

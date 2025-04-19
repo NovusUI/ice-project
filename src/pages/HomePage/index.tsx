@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeroSection from './HeroSection'
 import OurApproachSection from './OurApproachSection'
 import OurProjects from './OurProjects'
