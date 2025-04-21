@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-black text-white p-8 md:p-24 lg:p-48 w-full mx-auto text-left"
+      className="bg-black text-white py-16 p-8 md:p-24 lg:p-48 w-full mx-auto text-left"
     >
      <motion.h2
   className="text-3xl md:text-4xl font-semibold mb-5"

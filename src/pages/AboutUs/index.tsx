@@ -3,6 +3,7 @@ import LandScapeShowcase from "../../components/LandScapeShowcase"
 import { ProjectShowcase } from "../../components/ProjectShowcase"
 import LongTermPlan from "./LongTermPlan"
 import USPs from "./USPs"
+import SplitImageBanner from "./SplitImageBanner"
 
 
 const index = () => {
@@ -23,8 +24,10 @@ with a physical office located in Lagos, Nigeria"
  and architecture field, with a cumulative experience of almost 40 years, the strength and
  efficiency of our collective effort as a company is evident in the skillfulness we show,
  the brilliant results we achieve and how our work standards and ethics meet global benchmarks."
+ 
 />
-<USPs/>
+<SplitImageBanner/>
+
 <LandScapeShowcase header="what we do" body="Harnessing the concepts of Imagine, Create and Execute, the framework of ICE is modeled around 
 conceiving ideas and concepts in line with the unique needs of our target audience,
 assessing and then assembling  these ideas into practical concepts that preserve
@@ -32,6 +35,8 @@ the client’s initial vision, and implementation or execution — whether by pr
 solutions, executing architectural works, interior decor or project management. 
 We bring plans to life; and we ensure it’s even better than envisioned.
 "/>
+<USPs/>
+
 <LongTermPlan/>
 <LandScapeShowcase color="bg-[#000000]" textColor="text-[#ffffff]" header="why choose us" body="With a track record of delivering high-value, modern, and minimalist architecture, we are more than just designers—we are storytellers, shaping the future of spaces with a clear vision and an uncompromising commitment to excellence. Whether residential, commercial, or bespoke projects, we create environments that inspire, function flawlessly, and leave a lasting impression.
 "/>

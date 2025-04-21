@@ -53,7 +53,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
       {/* Current image fading in */}
       <motion.div
         key={`current-${current}`}
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover  bg-center z-0"
         style={{
           backgroundImage: `url(${backgroundImages[current]})`,
         }}
@@ -76,7 +76,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
         >
           {header}
         </motion.h2>
-        {body && <p className="text-sm md:text-base mb-6">{body}</p>}
+        {body && <p className="text-sm md:text-base mb-6 max-w-[600px]">{body}</p>}
         {isButton && <AnimatedBtn text="Learn more" onClick={onClick} />}
       </div>
     </section>

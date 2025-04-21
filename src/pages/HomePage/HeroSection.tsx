@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
       <motion.h1
-  className="relative text-4xl md:text-6xl font-bold leading-tight text-white"
+  className="relative text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
