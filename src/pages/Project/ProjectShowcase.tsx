@@ -15,7 +15,7 @@ const ProjectShowcase = ({starImg,content}:Props) => {
             <img
               src={starImg} // replace with actual image path
               alt="Project"
-              className="rounded-2xl w-full object-cover hover:grayscale transition-all duration-500 ease-in-out"
+              className="rounded-2xl w-full object-cover  transition-all duration-500 ease-in-out"
             />
           </div>
   
