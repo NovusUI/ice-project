@@ -8,7 +8,7 @@ const USPs = () => {
     ];
   
     return (
-      <section className="px-5 md:px-80 py-16 bg-[#ffffff]">
+      <section className="px-5 md:px-40 lg:px-80 py-16 bg-[#ffffff]">
         <motion.h2 
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}

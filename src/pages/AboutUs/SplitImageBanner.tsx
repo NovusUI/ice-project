@@ -2,7 +2,7 @@
 
 const SplitImageBanner = () => {
   return (
-    <div className="  px-4 md:px-16 flex justify-center items-center">
+    <div className="  px-4 md:px-16 flex justify-center items-center bg-white">
       <div className="relative rounded-[2rem]  w-full max-w-5xl z-20">
         <img
           src="/splitimage.jpg"

@@ -2,9 +2,11 @@ import {
     LinkedIn,
     Instagram,
     Facebook,
-    Close as XIcon,
+
   } from '@mui/icons-material';
 import AnimatedBtn from '../../components/buttons/AnimatedBtn';
+import XIcon from '@mui/icons-material/X';
+import { Link } from 'react-router-dom';
   
   const ContactSection = () => {
     return (
@@ -23,7 +25,7 @@ import AnimatedBtn from '../../components/buttons/AnimatedBtn';
               For all general and project related questions,<br />kindly contact
             </p>
             <p className="mb-4 font-medium underline underline-offset-2">
-              info@loremipsuim.com
+              info@iceprojects.co 
             </p>
   
             <p className="mb-2">
@@ -34,10 +36,10 @@ import AnimatedBtn from '../../components/buttons/AnimatedBtn';
             </p>
   
             <div className="flex gap-4 text-gray-700">
-              <a href="#"><LinkedIn fontSize="small" /></a>
-              <a href="#"><Instagram fontSize="small" /></a>
-              <a href="#"><XIcon fontSize="small" /></a>
-              <a href="#"><Facebook fontSize="small" /></a>
+            <Link to="#"><LinkedIn fontSize="small" /></Link>
+            <Link to="#"><Instagram fontSize="small" /></Link>
+            <Link to="#"><XIcon fontSize="small" /></Link>
+            <Link to="#"><Facebook fontSize="small" /></Link>
             </div>
           </div>
   

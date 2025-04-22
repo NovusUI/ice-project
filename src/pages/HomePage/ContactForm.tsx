@@ -24,6 +24,7 @@ const projectOptions = [
   { label: 'Architecture', value: 'architecture' },
   { label: 'Interior Design', value: 'interior' },
   { label: 'Renovation', value: 'renovation' },
+  { label: 'Contruction', value: 'construction' },
 ];
 
 const ContactForm: React.FC = () => {

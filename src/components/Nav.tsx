@@ -15,7 +15,7 @@ const currentPath = location.pathname;
   
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-[40px] lg:px-[80px] h-[10vh] shadow-sm sticky top-0 z-30 bg-white">
+    <nav className="flex items-center justify-between px-6 md:px-[40px] lg:px-[80px] h-[10vh] shadow-sm absolute w-full z-30 bg-[#FFFFFFB3]">
       {/* Logo Section with dramatic reveal */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -27,27 +27,32 @@ const currentPath = location.pathname;
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex space-x-6 text-sm font-medium">
-        {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) =>{ 
-           const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
-           const isActive = currentPath === linkPath;
-        return(
-          <Link
-          key={item}
-          to={`/${item.replace(" ", "-").toLowerCase()}`}
-          className={`relative group transition ${
-            isActive ? "text-[#1867C6]" : "text-black hover:text-[#1867C6]"
+  {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) => {
+    const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
+    const isActive = currentPath === linkPath;
+
+    return (
+      <motion.div key={item} whileTap={{ scale: 0.95 }} className="relative group">
+        <Link
+          to={linkPath}
+          className={`transition ${
+            isActive
+              ? "text-[#1867C6]"
+              : "text-black hover:text-[#1867C6] active:text-[#1867C6]"
           }`}
         >
           {item}
           <span
-        className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
-          isActive ? "w-[80%]" : "w-0 group-hover:w-[80%]"
-        }`}
-      ></span>
+            className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
+              isActive ? "w-[80%]" : "w-0 group-hover:w-[80%]"
+            }`}
+          ></span>
         </Link>
-        )
-      })}
-      </div>
+      </motion.div>
+    );
+  })}
+</div>
+
 
       {/* Desktop CTA Button */}
       <motion.button
@@ -95,24 +100,27 @@ const currentPath = location.pathname;
 
             {/* Nav Links with animated underline */}
             {["Home", "Expertise", "Projects", "About us", "Contacts"].map((item) => {
-                const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
-                const isActive = currentPath === linkPath;
-              return(
-              <Link
-              key={item}
-              to={`/${item.replace(" ", "-").toLowerCase()}`}
-              className={`relative text-white}`}
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-              <span
-        className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
-          isActive ? "w-[80%]" : "w-0 group-hover:w-[80%]"
-        }`}
-      ></span>
-            </Link>
-            
-            )})}
+  const linkPath = `/${item.replace(" ", "-").toLowerCase()}`;
+  const isActive = currentPath === linkPath;
+
+  return (
+    <motion.div key={item} whileTap={{ scale: 0.95 }} className="relative">
+      <Link
+        to={linkPath}
+        onClick={() => setIsOpen(false)}
+        className={`text-white transition`}
+      >
+        {item}
+        <span
+          className={`absolute left-0 -bottom-1 h-0.5 bg-[#1867C6] transition-all duration-300 ${
+            isActive ? "w-[80%]" : "w-0"
+          }`}
+        ></span>
+      </Link>
+    </motion.div>
+  );
+})}
+
 
             {/* Contact & Socials */}
             <div className="mt-10 space-y-2 text-sm text-gray-400 text-center">

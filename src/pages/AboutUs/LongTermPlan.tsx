@@ -2,7 +2,7 @@ import {motion} from "framer-motion"
 
 const LongTermPlan = () => {
     return (
-      <section className="px-4 md:px-40 py-24 bg-[#ffffff] flex flex-col md:flex-row items-center gap-10">
+      <section className="px-4 md:px-20 lg:px-40 py-24 bg-[#ffffff] flex flex-col md:flex-row items-center gap-10">
         {/* Left - Text */}
         <div className="md:w-1/2 text-gray-700">
           <motion.h2

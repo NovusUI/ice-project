@@ -14,7 +14,7 @@ const projects = [
 
 const ProjectsGrid = () => {
   return (
-    <section className="px-4 md:px-10 lg:px-20 py-20">
+    <section className="px-4 md:px-10 lg:px-20 py-20 bg-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={index} image={project.image} title={project.title} path={project.path}/>

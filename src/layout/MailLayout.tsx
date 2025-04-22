@@ -6,7 +6,9 @@ import Footer from '../components/Footer'
 const MainLayout = () => {
   return (
     <>
+    <header className="sticky top-0 z-30">
       <Navbar />
+      </header>
       <main className="flex-1">
         <Outlet /> {/* This will render your page */}
       </main>
