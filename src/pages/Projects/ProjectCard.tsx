@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, path }) => {
 
   return (
     <motion.div
-      className="relative group rounded-[20px] md:rounded-[30px] overflow-hidden cursor-pointer md:h-[450px]"
+      className="relative group rounded-[20px] md:rounded-[30px] overflow-hidden cursor-pointer md:h-[450px] group"
       onClick={() => navigate("/project/" + path)}
       whileTap="tap"
       initial="rest"
@@ -27,12 +27,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, path }) => {
       <img
         src={image}
         alt={title}
-        className="w-full h-full object-cover object-top transition-all duration-500 ease-in-out"
+        className="w-full h-full object-cover object-top transition-all duration-500 ease-in-out group-hover:scale-105"
       />
 
       {/* Title Reveal: tap (Framer) and hover (Tailwind) */}
       <motion.div
-        className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"
+        className="absolute inset-0 bg-black/20  flex items-center justify-center "
         whileTap={{ opacity: 1, y: 0 }}
       >
         <p className="text-white text-xl md:text-2xl font-semibold text-center px-4">

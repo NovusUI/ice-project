@@ -9,9 +9,9 @@ const ProjectShowcase = ({starImg,content}:Props) => {
 
     return (
       <section className="px-6 md:px-16 lg:px-32 py-20 bg-[#FDFDFC]">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-16 items-start">
           {/* Image */}
-          <div className="flex-shrink-0 w-full lg:w-2/6">
+          <div className="flex-shrink-0 w-full md:w-2/6">
             <img
               src={starImg} // replace with actual image path
               alt="Project"
@@ -20,7 +20,7 @@ const ProjectShowcase = ({starImg,content}:Props) => {
           </div>
   
           {/* Text Content */}
-          <div className="w-full lg:w-3/6">
+          <div className="w-full md:w-3/6">
             {/* The Idea */}
             <div className="space-y-4 text-left">
               <h3 className="font-semibold text-gray-700">The Idea</h3>

@@ -13,14 +13,14 @@ const ProjectGallery = ({images}:Prop) => {
             <img
               src={images[0]}
               alt="Gallery 1"
-              className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-105 "
+              className="w-full h-full object-cover  object-top transition duration-300 ease-in-out group-hover:scale-105 "
             />
           </div>
           <div className="col-span-1 row-span-1 rounded-2xl overflow-hidden group">
             <img
               src={images[1]}
               alt="Gallery 2"
-              className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover  object-top  transition duration-300 ease-in-out group-hover:scale-105"
             />
           </div>
   
@@ -29,14 +29,14 @@ const ProjectGallery = ({images}:Prop) => {
             <img
               src={images[2]}
               alt="Gallery 3"
-              className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover  object-top transition duration-300 ease-in-out group-hover:scale-105"
             />
           </div>
           <div className="col-span-2 row-span-1 rounded-2xl overflow-hidden group">
             <img
               src={images[3]}
               alt="Gallery 4"
-              className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover  object-top transition duration-300 ease-in-out group-hover:scale-105"
             />
           </div>
         </div>
