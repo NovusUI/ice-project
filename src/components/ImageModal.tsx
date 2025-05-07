@@ -59,9 +59,9 @@ const ImageModal = ({ images, currentIndex, onClose, onNext, onPrev }: ImageModa
           <AnimatePresence mode="wait">
             <motion.img
               key={currentIndex}
-              initial={{ opacity: 0, x: currentIndex > 0 ? 100 : -100 }}
+              initial={{ opacity: 0, x:  -100 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: currentIndex > 0 ? -100 : 100 }}
+              exit={{ opacity: 0, x:  100  }}
               transition={{ duration: 0.3 }}
               src={images[currentIndex]} 
               alt={`Gallery ${currentIndex + 1}`}
@@ -82,8 +82,8 @@ const ImageModal = ({ images, currentIndex, onClose, onNext, onPrev }: ImageModa
               </motion.button>
               <motion.button 
                 onClick={onNext}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={currentIndex === images.length - 1 ?{backgroundColor:"#FF000080"}:{ scale: 1.1 }}
+                whileTap={currentIndex === images.length - 1 ?{backgroundColor:"#FF000080"}:{ scale: 0.9 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center z-10"
                 disabled={currentIndex === images.length - 1}
               >
