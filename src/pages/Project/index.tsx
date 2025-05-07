@@ -131,7 +131,7 @@ const index = () => {
   return (
     <>
       <ProjectShowcase header={data[id].title} backgroundImages={[data[id].image]}/>
-      <ProjectDetails starImg={data[id].starImg} content={data[id].content}/>
+      <ProjectDetails starImg={data[id].starImg} content={data[id].content} images={data[id].images}/>
       <ProjectGallery images={data[id].images}/>
       <LandScapeShowcase color="bg-[#817569]" textColor="text-[#ffffff]" header="Let’s start Creating" body="Have a project in mind? Let’s discuss how we can bring your vision to life with thoughtful, modern design. Reach out to us today!" buttonTitle="Contact us"/>
     </>
