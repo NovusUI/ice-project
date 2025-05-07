@@ -7,7 +7,7 @@ const ProjectGallery = ({images}:Prop) => {
   
     return (
         <section className="bg-[#FDFDFC] px-6 md:px-16 lg:px-32 py-20">
-        <div className="grid grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+        <div className="grid sm:grid-cols-3 gap-2 sm:gap-6 auto-rows-[300px] md:auto-rows-[400px]">
           {/* Row 1 */}
           <div className="col-span-2 row-span-1 rounded-2xl overflow-hidden group">
             <img
