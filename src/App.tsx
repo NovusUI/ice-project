@@ -17,13 +17,13 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path='home' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
         {/* Add more routes like this */}
-        <Route path="expertise" element={<Expertise />} />
-        <Route path="projects" element={<ProjectsPage/>} />
-        <Route path="about-us" element={<AboutUs/>} />
-        <Route path="contacts" element={<Contacts/>} />
-        <Route path='project/:id' element={<ProjectPage/>} />
+        <Route path="/expertise" element={<Expertise />} />
+        <Route path="/projects" element={<ProjectsPage/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/contacts" element={<Contacts/>} />
+        <Route path='/project/:id' element={<ProjectPage/>} />
       </Route>
     </Routes>
   </Router>
