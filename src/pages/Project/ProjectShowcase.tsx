@@ -8,9 +8,12 @@ interface Props {
   starImg: string;
   content: string[];
   images: string[];
+  location: string,
+  type: string,
+  completionDate:string
 }
 
-const ProjectShowcase = ({ starImg, content, images = [] }: Props) => {
+const ProjectShowcase = ({ starImg, content, images = [],location,type,completionDate }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -82,19 +85,19 @@ const ProjectShowcase = ({ starImg, content, images = [] }: Props) => {
 
             <div className="flex justify-between text-sm">
               <span className="text-gray-700">Location</span>
-              <span className="font-semibold">Loremipsuim</span>
+              <span className="font-semibold text-gray-700">{location}</span>
             </div>
             <hr className="border-gray-300" />
 
             <div className="flex justify-between text-sm">
               <span className="text-gray-700">Project type</span>
-              <span className="font-semibold">Loremipsuim</span>
+              <span className="font-semibold text-gray-700">{type}</span>
             </div>
             <hr className="border-gray-300" />
 
             <div className="flex justify-between text-sm">
               <span className="text-gray-700">Completion date</span>
-              <span className="font-semibold">2024</span>
+              <span className="font-semibold text-gray-700">{completionDate}</span>
             </div>
           </div>
         </div>

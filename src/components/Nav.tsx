@@ -12,6 +12,10 @@ const Navbar = () => {
   const location = useLocation();
 const currentPath = location.pathname;
 
+const handleScrollToBottom = () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+};
+
   
 
   return (
@@ -64,6 +68,7 @@ const currentPath = location.pathname;
     repeatType: "reverse",
     ease: "easeInOut"
   }}
+  onClick={handleScrollToBottom}
 >
   Get in touch
 </motion.button>
